@@ -144,14 +144,15 @@
 
 
 /* jumbotron */
-.jumbotron {
+.jumbotron{
+  padding-top: 75px;
+}
+.jumbotron, .about {
   background: rgb(15, 75, 126);
   background: linear-gradient(90deg, rgba(15, 75, 126, 0.7) 0%, rgba(125, 143, 151, 0.5) 50%, rgba(50, 67, 69, 0.3) 100%);
-  padding-top: 75px;
 }
 
 .page-name,.bungkus-page-img {
-  background-color: #f58c41;
   height: 70vh;
   text-align: center;
   justify-content: center;
@@ -366,6 +367,7 @@
 /* img merubah ketika dihover */
 
 
+
 .img-home,
 .img {
   width: 300px;
@@ -375,4 +377,14 @@
 
 #home {
   height: 3000px;
+}
+
+
+
+
+/* about */
+.about-me{
+  background-color: #fd5949;
+  text-align: center;
+  padding: 30px 0;
 }
