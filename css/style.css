@@ -1,0 +1,378 @@
+:root {
+  --space-shuttle: #4A4137;
+  --big-stone: #324345;
+  --light-slate-grey: #7D8F97;
+  --hit-pink: #FEAC73;
+  --dark-cerulean: #0F4B7E;
+}
+
+.navbar {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.navbar-brand::before,
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.navbar-brand::before {
+  background-color: white;
+  height: 3px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.navbar-brand::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  text-align: center;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: var(--hit-pink);
+}
+
+.navbar-brand:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.navbar-brand:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.navbar-brand span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: white;
+  text-align: center;
+  padding-left: 3rem;
+}
+
+.navbar-brand:hover span {
+  transform: translate3d(-200%, 0, 0);
+  color: white;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: var(--hit-pink);
+  font-weight: 700;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  padding-left: 1rem;
+}
+
+/* :hover nav */
+.navbar-home {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navbar-home * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.navbar-home .bungkus-a {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.2rem;
+  overflow: hidden;
+}
+
+.navbar-home a {
+  padding: 0.3em 0;
+  color: rgb(255, 255, 255);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.navbar-home a:before,
+.navbar-home a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.navbar-home a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #ffffff;
+  left: 0;
+}
+
+.navbar-home a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: var(--hit-pink);
+  white-space: nowrap;
+}
+
+.navbar-home .bungkus-a:hover a,
+.navbar-home .current a {
+  transform: translateY(100%);
+}
+
+.bungkus-a a,
+.navbar-home a:after {
+  font-weight: bold;
+}
+
+/* end navbar */
+
+
+/* jumbotron */
+.jumbotron {
+  background: rgb(15, 75, 126);
+  background: linear-gradient(90deg, rgba(15, 75, 126, 0.7) 0%, rgba(125, 143, 151, 0.5) 50%, rgba(50, 67, 69, 0.3) 100%);
+  padding-top: 75px;
+}
+
+.page-name,.bungkus-page-img {
+  background-color: #f58c41;
+  height: 70vh;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.bungkus-h1-page {
+  padding-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === typing === */
+#typing {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+#typing span {
+  color: black;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#line {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  animation: crow 0.5s linear 0s infinite;
+}
+
+@keyframes crow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tambahan prefix untuk dukungan browser yang lebih lama */
+@-webkit-keyframes crow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* === end typing === */
+
+
+.bungkus-p-page {
+  padding: 0 10px;
+}
+
+/* === icon sosmed === */
+.bungkus-icon a {
+  color: black;
+  padding: 3px 0 0;
+  margin: 5px 0;
+  font-size: 35px;
+  transition: .5s;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
+}
+
+.bungkus-icon {
+  display: inline;
+  margin: 0 10px;
+}
+
+.bungkus-icon a:hover {
+  color: white;
+  transform: translate(0, -15%);
+}
+
+.bungkus-icon .instagram-icon:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.bungkus-icon .github-icon:hover {
+  background-color: #211F1F;
+}
+
+.bungkus-icon .twitter-x-icon:hover {
+  background-color: black;
+}
+
+.icon-sosmed {
+  margin: 20px 0;
+}
+
+/* === tombol === */
+.page-name-tombol .button{
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2.7rem 0;
+  cursor: pointer;
+}
+.btn-liquid{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  z-index: 10;
+  transition: all 1s ease;
+  &:before, &:after {
+      content: "";
+      height: 150px;
+      width: 150px;
+      position: absolute;
+      z-index: -1;
+      top: 150%;
+      transition: all .7s ease;
+    }
+  &:before {
+      border-radius: 60% 70% 20% 40%;
+      background: #002fff;
+      opacity: .2;
+      animation: water 13s ease-in-out infinite both alternate;
+    }
+    &:after {
+      border-radius: 60% 70% 20% 40%;
+      background: #002fff;
+      opacity: .5;
+      animation: water 14s ease-in-out infinite both alternate;
+    }
+  &:hover {
+    background: #002fff;
+    color: white;
+    &:before, &:after {
+        opacity: 1;
+        top: -100%;
+      }
+  }
+}
+
+@keyframes water {
+  0% {
+    transform: rotate(0);
+  }
+  
+  20% {
+    border-radius: 50% 63% 80% 49%;
+  }
+  40% {
+    border-radius: 60% 64% 64% 48%;
+  }
+  60% {
+    border-radius: 80% 63% 51% 49%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58%;
+  }
+  100% {
+    border-radius: 62% 67% 70% 53%;
+    transform: rotate(180deg);
+  }
+}
+
+/* magnetic button */
+.name-tombol{
+  /* background-color: #002fff; */
+  text-align: center;
+  position: relative;
+}
+.page-name-tombol {
+  /* background-color: #211F1F; */
+  display: flex;
+  position: relative;
+  height: 150px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+
+/* page image */
+.bungkus-page-img{
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+.page-img{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  top: 10%;
+
+}
+/* img merubah ketika dihover */
+
+
+.img-home,
+.img {
+  width: 300px;
+  height: 400px;
+
+}
+
+#home {
+  height: 3000px;
+}
