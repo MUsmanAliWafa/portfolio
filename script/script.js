@@ -1,5 +1,5 @@
 // ==== typing =====
-const words = ["Hallo Wellcome", "Orang biasa", "I am Usman"];
+const words = ["Hallo Wellcome", "I am Usman "];
 let wordIndex = 0;
 let charIndex = 0;
 let isTyping = true; // Variable untuk mengontrol animasi pengetikan
