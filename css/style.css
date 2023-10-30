@@ -147,9 +147,10 @@
 .jumbotron{
   height: 100vh;
   width: 100vw;
-}
-.jumbotron, .about {
+}.jumbotron, .about,.projects{
   padding-top: 5rem;
+}
+.jumbotron, .about,.contact ,.projects{
   background: rgb(15, 75, 126);
   background: linear-gradient(90deg, rgba(15, 75, 126, 0.7) 0%, rgba(125, 143, 151, 0.5) 50%, rgba(50, 67, 69, 0.3) 100%);
 }
@@ -359,7 +360,6 @@
   margin: 0;
 }
 .page-img{
-  position: relative;
   text-align: center;
   display: inline-block;
   justify-content: center;
@@ -367,11 +367,13 @@
 
 }
 /* img merubah ketika dihover */
-
+/* .bungkus-page-img .page-img .img-home:hover{
+  background-image: url('asset/img-home2.jpg');
+} */
 
 
 .img-home,
-.img {
+.img  {
   width: 300px;
   height: 400px;
 }
@@ -390,4 +392,10 @@
 .projects-img img{
   width: auto;
   height: 300px;
+}
+
+/* contact */
+.bungkus1 .bungkus-img img{
+  width: auto;
+  height: 400px;
 }
