@@ -81,38 +81,74 @@
 }
 
 /* :hover nav */
-.navbar-home {margin-right: 35px;}
-.bungkus-a a{
+.navbar-home {
+  margin-right: 35px;
+}
+
+.bungkus-a a {
   color: white;
 }
-.bungkus-a a:hover{color: var(--hit-pink);}
 
-.navbar-home .bungkus-a a {
-  position: relative;
-  color: white;
-  text-decoration: none;
+.bungkus-a a:hover {
+  color: var(--hit-pink);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.snip1226 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.snip1226 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1226 .bungkus-a {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
   overflow: hidden;
 }
-
-.navbar-home .bungkus-a a:after {
-  content: attr(data-hover);
+.snip1226 a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.snip1226 a:before,
+.snip1226 a:after {
   position: absolute;
-  top: 100%;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1226 a:before {
+  bottom: 100%;
+  display: block;
+  height: 30px;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+.snip1226 a:after {
+  padding: 0.3rem 0;
+  position: absolute;
+  display: block;
+  bottom: 100%;
   left: 0;
+  content: attr(data-hover);
   color: white;
   white-space: nowrap;
-  background-color: #e67e22;
-  height: 100%;
-  width: 100%;
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: transform 0.3s, opacity 0.3s;
+}
+.snip1226 .bungkus-a:hover a,
+.snip1226 .current a {
+  transform: translateY(100%);
 }
 
-.navbar-home .bungkus-a a:hover:after {
-  transform: translateY(0);
-  opacity: 1;
-}
 
 
 /* end navbar */
