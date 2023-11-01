@@ -86,6 +86,35 @@
   color: white;
 }
 .bungkus-a a:hover{color: var(--hit-pink);}
+
+.navbar-home .bungkus-a a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.navbar-home .bungkus-a a:after {
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: white;
+  white-space: nowrap;
+  background-color: #e67e22;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.navbar-home .bungkus-a a:hover:after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
 /* end navbar */
 
 
@@ -314,11 +343,12 @@
   display: flex;
   position: relative;
   height: 150px;
-  width: 200px;
+  width: auto;
   justify-content: center;
   align-items: center;
   display: inline-block;
 }
+
 
 
 /* page image */

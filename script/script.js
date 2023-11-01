@@ -75,7 +75,7 @@ const stopAnimationInterval = setInterval(function () {
 $(".page-name-tombol").mouseleave(function (e) {
     TweenMax.to(this, 0.3, {
         height: 150,
-        width: 200
+        width: 300
     });
     TweenMax.to(".circle", 0.3, {
         scale: 1,
@@ -87,7 +87,7 @@ $(".page-name-tombol").mouseleave(function (e) {
 $(".page-name-tombol").mouseenter(function (e) {
     TweenMax.to(this, 0.3, {
         height: 150,
-        width: 200
+        width: 300
     });
     TweenMax.to(".circle", 0.3, {
         scale: 1.3
