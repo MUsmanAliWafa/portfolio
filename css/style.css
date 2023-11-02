@@ -93,25 +93,24 @@
   color: var(--hit-pink);
 }
 
-
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
-.snip1226 {
+.navbar-home {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
 }
-.snip1226 * {
+.navbar-home * {
+  overflow-x: visible;
   box-sizing: border-box;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-.snip1226 .bungkus-a {
+.navbar-home .bungkus-a {
   display: inline-block;
   list-style: outside none none;
   margin: 0 1.5em;
   overflow: hidden;
 }
-.snip1226 a {
+.navbar-home a {
   padding: 0.3em 0;
   color: rgba(255, 255, 255, 0.5);
   position: relative;
@@ -120,21 +119,22 @@
   margin: 0;
   text-decoration: none;
 }
-.snip1226 a:before,
-.snip1226 a:after {
+.navbar-home a:before,
+.navbar-home a:after {
   position: absolute;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-.snip1226 a:before {
+.navbar-home a:before {
   bottom: 100%;
   display: block;
-  height: 30px;
+  height: 3px;
   width: 100%;
   content: "";
   background-color: #e67e22;
+  left: 0;
 }
-.snip1226 a:after {
+.navbar-home a:after {
   padding: 0.3rem 0;
   position: absolute;
   display: block;
@@ -144,8 +144,8 @@
   color: white;
   white-space: nowrap;
 }
-.snip1226 .bungkus-a:hover a,
-.snip1226 .current a {
+.navbar-home .bungkus-a:hover a,
+.navbar-home .current a {
   transform: translateY(100%);
 }
 
