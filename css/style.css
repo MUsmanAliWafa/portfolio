@@ -426,6 +426,12 @@
   text-align: center;
   padding: 30px 0;
 }
+.about-bungkus-img{
+  background-color: #fdf497;
+}
+.about-bungkus-skil{
+  background-color: #e67e22;
+}
 
 /* project */
 .projects-img img {
