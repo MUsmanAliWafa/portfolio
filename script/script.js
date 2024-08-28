@@ -70,27 +70,26 @@ const stopAnimationInterval = setInterval(function () {
     }
 }, 1000);
 
-
 // magnetic
 $(".page-name-tombol").mouseleave(function (e) {
     TweenMax.to(this, 0.3, {
         height: 150,
-        width: 300
+        width: 300,
     });
     TweenMax.to(".circle", 0.3, {
         scale: 1,
         x: 0,
-        y: 0
+        y: 0,
     });
 });
 
 $(".page-name-tombol").mouseenter(function (e) {
     TweenMax.to(this, 0.3, {
         height: 150,
-        width: 300
+        width: 300,
     });
     TweenMax.to(".circle", 0.3, {
-        scale: 1.3
+        scale: 1.3,
     });
 });
 
@@ -113,8 +112,6 @@ function parallaxIt(e, target, movement) {
         ease: Power2.easeOut,
     });
 }
-
-
 
 // tahun
 let currentYear = new Date().getFullYear();
