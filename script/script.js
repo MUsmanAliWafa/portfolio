@@ -1,3 +1,4 @@
+console.log("hallo world");
 // ==== typing =====
 const words = ["Hallo Wellcome", "I am Usman "];
 let wordIndex = 0;
